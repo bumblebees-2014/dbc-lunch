@@ -11,6 +11,7 @@ require 'pry'
 gem 'bcrypt-ruby', '~> 3.0.0'
 require 'pry'
 require 'chronic'
+require 'whenever'
 
 require 'uri'
 require 'pathname'

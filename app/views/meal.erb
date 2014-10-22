@@ -1,30 +1,5 @@
-<!-- <ul>
-
-  <%# DBC::Cohort.find(58).students.each do |student| %>
-    <li><%#= student.name %></li>
-  <%# end %>
-
-  <%# DBC::Cohort.find(57).students.each do |student| %>
-    <li><%#= student.name %></li>
-  <%# end %>
-
-  <%# DBC::Cohort.find(59).students.each do |student| %>
-  <li><%#= student.name %></li>
-  <%# end %>
-
-</ul> -->
-
-<h1>Lunch pairings</h1>
-
-<% 18.times do %>
-
-  <% @lunchpartner1 = User.find((1..39).to_a.sample) %>
-  <% @lunchpartner2 = User.find((1..39).to_a.sample) %>
-
-  <%= @lunchpartner1.name %> and <%= @lunchpartner2.name %><br><br>
-
-  <%= Lunch.create(lunchpartner1: @lunchpartner1, lunchpartner2: @lunchpartner2, location: "Dig Inn", date: Chronic.parse("tomorrow at noon")) %>
-
+<% 19.times do %>
+  <%= random_lunch_pairings %><br><br>
 <% end %>
 
 
