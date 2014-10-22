@@ -1,21 +1,27 @@
-<ul>
+<!-- <ul>
 
-  <% DBC::Cohort.find(58).students.each do |student| %>
-    <li><%= student.name %></li>
-  <% end %>
+  <%# DBC::Cohort.find(58).students.each do |student| %>
+    <li><%#= student.name %></li>
+  <%# end %>
 
-  <% DBC::Cohort.find(57).students.each do |student| %>
-    <li><%= student.name %></li>
-  <% end %>
+  <%# DBC::Cohort.find(57).students.each do |student| %>
+    <li><%#= student.name %></li>
+  <%# end %>
 
-  <% DBC::Cohort.find(59).students.each do |student| %>
-  <li><%= student.name %></li>
-  <% end %>
+  <%# DBC::Cohort.find(59).students.each do |student| %>
+  <li><%#= student.name %></li>
+  <%# end %>
 
-</ul>
+</ul> -->
+
+<h1>Lunch pairings</h1>
 
 <% 18.times do %>
-  <%= User.find((1..39).to_a.sample).name %> and <%= User.find((1..39).to_a.sample).name %><br><br>
+
+  <%= @lunchpartner1 = User.find((1..39).to_a.sample).name %> and <%= @lunchpartner2 = User.find((1..39).to_a.sample).name %><br><br>
+
+  <%#= Lunch.create() %>
+
 <% end %>
 
 
