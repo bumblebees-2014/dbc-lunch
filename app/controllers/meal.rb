@@ -5,5 +5,6 @@ end
 
 get '/meal/:id' do
   @lunch = Lunch.find(params[:id])
+  random_lunch_pairings
   erb :individual_meal
 end
