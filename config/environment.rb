@@ -8,7 +8,7 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 # Require gems we care about
 require 'rubygems'
 require 'pry'
-require 'bcrypt'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 require 'uri'
 require 'pathname'
