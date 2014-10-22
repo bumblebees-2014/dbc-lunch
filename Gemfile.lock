@@ -17,6 +17,7 @@ GEM
     backports (2.6.1)
     bcrypt-ruby (3.0.0)
     builder (3.0.4)
+    chronic (0.10.2)
     coderay (1.1.0)
     daemons (1.1.9)
     dbc-ruby (1.0.4)
@@ -81,6 +82,7 @@ DEPENDENCIES
   activesupport
   awesome_print
   bcrypt-ruby (~> 3.0.0)
+  chronic
   dbc-ruby
   faker
   pg

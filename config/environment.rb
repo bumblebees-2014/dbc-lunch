@@ -10,6 +10,7 @@ require 'rubygems'
 require 'pry'
 gem 'bcrypt-ruby', '~> 3.0.0'
 require 'pry'
+require 'chronic'
 
 require 'uri'
 require 'pathname'
