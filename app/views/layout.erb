@@ -19,10 +19,11 @@
 </head>
 <body>
   <header>
-    <a href="/">Home</a>
     <% if session[:user_id] %>
+      <a href="/meal">Home</a>
       <a href="/logout">Logout</a>
     <% else %>
+      <a href="/">Home</a>
       <a href="/session">Sign in</a>
       <a href="/user">Create User</a>
     <% end %>
