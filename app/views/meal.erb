@@ -14,10 +14,9 @@
 
 </ul>
 
-<% @random_pairing1 = (1..39).to_a.sample %>
-<% @random_pairing2 = (1..39).to_a.sample %>
-
-<%= User.find(@random_pairing1).name %> and <%= User.find(@random_pairing2).name %>
+<% 18.times do %>
+  <%= User.find((1..39).to_a.sample).name %> and <%= User.find((1..39).to_a.sample).name %><br><br>
+<% end %>
 
 
 
