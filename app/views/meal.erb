@@ -1,5 +1,5 @@
 <% 19.times do %>
-  <%= random_lunch_pairings %><br><br>
+  <br><a href="/meal/<%=random_lunch_pairings.id%>"><%= random_lunch_pairings.lunchpartner1.name %> and <%= random_lunch_pairings.lunchpartner2.name %></a><br>
 <% end %>
 
 
