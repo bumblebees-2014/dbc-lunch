@@ -9,6 +9,7 @@ $(document).ready(function() {
     $.ajax ({
       type: "post",
       url: "/meal/" + lunchId.dataset.lunch,
+      console.log(lunchId.dataset.lunch)
       data: $(this).serialize,
       dataType: "jquery"
     }).done(function(response){
