@@ -1,4 +1,4 @@
-<ol>
+<ul>
 
   <% DBC::Cohort.find(58).students.each do |student| %>
     <li><%= student.name %></li>
@@ -12,7 +12,11 @@
   <li><%= student.name %></li>
   <% end %>
 
-</ol>
+</ul>
+
+<% DBC::Cohort.find(57).students.each do |student| %>
+<%= student.name %>
+<% end %>
 
 
 

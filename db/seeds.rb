@@ -35,3 +35,16 @@ end
 
 # How I'll implement javascript
 # When you click on a certain meal, should be able to comment on it (or accept!)
+
+# Create user accounts for everyone
+DBC::Cohort.find(58).students.each do |student|
+  User.create(name: student.name, username: student.name.gsub(/\s+/, ""), password: student.name.gsub(/\s+/, ""))
+end
+
+DBC::Cohort.find(57).students.each do |student|
+  User.create(name: student.name, username: student.name.gsub(/\s+/, ""), password: student.name.gsub(/\s+/, ""))
+end
+
+DBC::Cohort.find(59).students.each do |student|
+  User.create(name: student.name, username: student.name.gsub(/\s+/, ""), password: student.name.gsub(/\s+/, ""))
+end
