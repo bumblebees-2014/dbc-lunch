@@ -1,17 +1,17 @@
 # Cohort email
- DBC::Cohort.find(58).email # =>  "bumblebees.2014@devbootcamp.com"
+# DBC::Cohort.find(58).email # =>  "bumblebees.2014@devbootcamp.com"
 # Cohort ID
- DBC::Cohort.find(58).id # => "58"
+# DBC::Cohort.find(58).id # => "58"
 # Cohort name
- DBC::Cohort.find(58).name #=> "Bumblebees 2014"
+# DBC::Cohort.find(58).name #=> "Bumblebees 2014"
 # Cohort start date
-DBC::Cohort.find(58).start_date # "2014-09-15"
+# DBC::Cohort.find(58).start_date # "2014-09-15"
 # Cohort students
-DBC::Cohort.find(58).students
+# DBC::Cohort.find(58).students
 # Cohort each statement
-@student_array = DBC::Cohort.find(58).students.each do |student|
-  p student.name
-end
+# @student_array = DBC::Cohort.find(58).students.each do |student|
+#   p student.name
+# end
 # => "Alex Ung"
 # "Steve Ono"
 # "Francisco De La Cruz"
@@ -38,13 +38,13 @@ end
 
 # Create user accounts for everyone
 DBC::Cohort.find(58).students.each do |student|
-  User.create(name: student.name, username: student.name.gsub(/\s+/, ""), password: student.name.gsub(/\s+/, ""))
+  User.create(name: student.name, username: student.name.gsub(/\s+/, "").downcase, password: student.name.gsub(/\s+/, "").downcase)
 end
 
 DBC::Cohort.find(57).students.each do |student|
-  User.create(name: student.name, username: student.name.gsub(/\s+/, ""), password: student.name.gsub(/\s+/, ""))
+  User.create(name: student.name, username: student.name.gsub(/\s+/, "").downcase, password: student.name.gsub(/\s+/, "").downcase)
 end
 
 DBC::Cohort.find(59).students.each do |student|
-  User.create(name: student.name, username: student.name.gsub(/\s+/, ""), password: student.name.gsub(/\s+/, ""))
+  User.create(name: student.name, username: student.name.gsub(/\s+/, "").downcase, password: student.name.gsub(/\s+/, "").downcase)
 end
