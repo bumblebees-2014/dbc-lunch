@@ -116,12 +116,19 @@ namespace :db do
   task :version do
     puts "Current version: #{ActiveRecord::Migrator.current_version}"
   end
+
+  desc 'drop, create, migrate, and seed'
+    task :yolo do
+  exec "rake db:drop && rake db:create && rake db:migrate && rake db:seed"
+  end
 end
 
 desc 'Start IRB with application environment loaded'
 task "console" do
   exec "irb -r./config/environment"
 end
+
+
 
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)

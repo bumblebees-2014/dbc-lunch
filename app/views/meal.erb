@@ -18,9 +18,12 @@
 
 <% 18.times do %>
 
-  <%= @lunchpartner1 = User.find((1..39).to_a.sample).name %> and <%= @lunchpartner2 = User.find((1..39).to_a.sample).name %><br><br>
+  <% @lunchpartner1 = User.find((1..39).to_a.sample) %>
+  <% @lunchpartner2 = User.find((1..39).to_a.sample) %>
 
-  <%#= Lunch.create() %>
+  <%= @lunchpartner1.name %> and <%= @lunchpartner2.name %><br><br>
+
+  <%= Lunch.create(lunchpartner1: @lunchpartner1.id, lunchpartner2: @lunchpartner2.id, location: "Dig Inn", time: ) %>
 
 <% end %>
 
