@@ -14,9 +14,10 @@
 
 </ul>
 
-<% DBC::Cohort.find(57).students.each do |student| %>
-<%= student.name %>
-<% end %>
+<% @random_pairing1 = (1..39).to_a.sample %>
+<% @random_pairing2 = (1..39).to_a.sample %>
+
+<%= User.find(@random_pairing1).name %> and <%= User.find(@random_pairing2).name %>
 
 
 
