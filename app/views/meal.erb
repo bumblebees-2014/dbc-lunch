@@ -1,5 +1,6 @@
+<h1>All Meals</h1>
 <% 19.times do %>
-  <br><a href="/meal/<%=random_lunch_pairings.id%>"><%= random_lunch_pairings.lunchpartner1.name %> and <%= random_lunch_pairings.lunchpartner2.name %></a><br>
+  <br><a href="/meal/<%=random_lunch_pairings.id%>" class="lunch-id" data-lunch="<%=random_lunch_pairings.id%>"><%= random_lunch_pairings.lunchpartner1.name %> and <%= random_lunch_pairings.lunchpartner2.name %></a><br>
 <% end %>
 
 
