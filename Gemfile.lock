@@ -15,7 +15,7 @@ GEM
     arel (3.0.2)
     awesome_print (1.2.0)
     backports (2.6.1)
-    bcrypt (3.1.7)
+    bcrypt-ruby (3.0.0)
     builder (3.0.4)
     coderay (1.1.0)
     daemons (1.1.9)
@@ -80,7 +80,7 @@ DEPENDENCIES
   activerecord
   activesupport
   awesome_print
-  bcrypt
+  bcrypt-ruby (~> 3.0.0)
   dbc-ruby
   faker
   pg
