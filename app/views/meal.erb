@@ -1,0 +1,11 @@
+<ol>
+<% DBC::Cohort.find(58).students.each do |student| %>
+  <li><%= student.name %></li>
+
+<% end %>
+</ol>
+
+
+
+
+
