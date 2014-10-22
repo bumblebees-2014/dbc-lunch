@@ -5,7 +5,8 @@ get '/session' do
 end
 
 post '/session' do
-  user = User.find_by(username: params[:username])
+
+  user = User.find_by_username(params[:username])
 
   if user.nil?
     session[:error] = "Login failed"
@@ -16,7 +17,7 @@ post '/session' do
 
   if user
     session[:user_id] = user.id
-    redirect "/ride"
+    redirect "/meal"
   else
     session[:error] = "Login failed"
     redirect '/session'
