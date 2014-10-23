@@ -13,8 +13,8 @@ get '/meal/:id' do
 end
 
 put '/meal/:id' do
-  @lunch = Lunch.find(params[:id])
-  @lunch.update(lunchpartner1_accept: false, lunchpartner2_accept: false)
+  @lunch = UpcomingLunch.find(params[:id])
+  @lunch.update(params[:lunchpartner1_accept], params[:lunchpartner2_accept])
 
   redirect '/meal'
   response = "My ajax works. But my app doesnt...".to_json
