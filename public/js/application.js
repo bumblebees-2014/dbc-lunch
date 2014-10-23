@@ -3,16 +3,16 @@ $(document).ready(function() {
   $('.acceptance-btn1').on("click", function(event){
     event.preventDefault();
     $(this).hide();
-    $('p').css('background-color', 'green')
+    $('p.lunchpartner1').css('background-color', 'red')
     var url = $(this).attr("action")
-    // var lunchId = document.querySelector('.lunch-id');
+
     console.log(url)
 
     $.ajax ({
       type: "post",
       url: "/meal/:id",// + lunchId.dataset.lunch,
       data: $(this).serialize(),
-      // dataType: "json"
+      dataType: "json"
     }).done(function(response){
       console.log(response)
       $(".acceptance-btn2").append(response)
@@ -23,9 +23,8 @@ $(document).ready(function() {
   $('.acceptance-btn2').on("click", function(event){
     event.preventDefault();
     $(this).hide();
-    $('h5').css('background-color', 'green')
+    $('p.lunchpartner2').css('background-color', 'red')
 
-    //var lunchId = document.querySelector('.lunch-id');
     $.ajax ({
       type: "post",
       url: "/meal/:id", //+ lunchId.dataset.lunch,

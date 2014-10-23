@@ -21,10 +21,12 @@
   <header>
     <center><h1>Lunch @ DBC</h1></center>
     <% if session[:user_id] %>
+      <a href="/allmeals">All Meals</a>
       <a href="/meal">Home</a>
       <a href="/logout">Logout</a>
     <% else %>
       <a href="/meal">Home</a>
+      <a href="/meal/all">All Meals</a>
       <a href="/session">Sign in</a>
       <a href="/user">Create User</a>
     <% end %>
