@@ -2,12 +2,14 @@
 
 <h2>Where are we eating today?:</h2>
 
-<h3>Dig Inn</h3>
+<h3><%=["Dig Inn", "Justino's Pizza", "Ulysses"].sample %></h3><br>
 
-<% 19.times do %>
-  <br><a href="/meal/<%=random_lunch_pairings.id%>" class="lunch-id" data-lunch="<%=random_lunch_pairings.id%>" data-lunchpartner1="<%= random_lunch_pairings.lunchpartner1.name %>" data-lunchpartner2="<%= random_lunch_pairings.lunchpartner2.name %>"><%= @lunchpartner1 = random_lunch_pairings.lunchpartner1.name %> and <%= @lunchpartner2 = random_lunch_pairings.lunchpartner2.name %></a><br>
+<% @lunches = UpcomingLunch.all %>
+
+<% @lunches.each do |lunch| %>
+  <br><a href="/meal/<%=lunch.id%>" class="lunch-id"><%= lunch.lunchpartner1.name %> and <%= lunch.lunchpartner2.name %></a><br>
+
 <% end %>
-
 
 
 
