@@ -1,5 +1,4 @@
 get '/meal' do
-  @lunches = UpcomingLunch.all
   erb :meal
 end
 
@@ -12,12 +11,14 @@ get '/meal/:id' do
   erb :individual_meal
 end
 
-patch '/meal/:id' do
+post '/meal/:id' do
   lunch = UpcomingLunch.find(params[:id])
-  p "*"*30
-  p params[:lunch]
-  p "*"*30
-  lunch.update_attributes(params[:lunch])
-  redirect '/meal'
-  response = "My ajax works. But my app doesnt...".to_json
+  # return "lol".to_json
+  if lunch.lunchpartner2_accept == true
+    lunch.update_attributes(lunchpartner2_accept: false)
+  elsif lunch.lunchpartner1_accept == true
+    lunch.update_attributes(lunchpartner1_accept: false)
+  end
+"lol".to_json
+  #response = "My ajax works. But my app doesnt..."
 end
