@@ -31,9 +31,4 @@ $(document).ready(function() {
   });
 
 
-  // if ($('p').css('background-color') === "green")
-  //   {
-  //     alert("One or both of you have declined...")
-  // }
-
 });
