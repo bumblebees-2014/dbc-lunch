@@ -52,3 +52,8 @@ end
 #retrieve what week via the lunch model
 #no need to create separate table
 #no need to use whenever because I'll have all the weeks store their lunches
+array = (1..39).to_a
+
+19.times do
+  UpcomingLunch.create(lunchpartner1: User.find(array.shuffle!.pop), lunchpartner2: User.find(array.shuffle!.pop), location: "Dig Inn", date: Chronic.parse("tomorrow at noon"), lunchpartner1_accept: true, lunchpartner2_accept: true)
+end
