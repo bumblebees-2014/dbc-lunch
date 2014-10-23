@@ -12,6 +12,7 @@ gem 'thin'
 gem 'pry'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+
 gem 'activesupport'
 gem 'activerecord'
 gem 'chronic'

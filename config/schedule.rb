@@ -18,7 +18,3 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-
-every :monday, :at => "12am" do
-  runner "User.random_lunch_pairings"
-end
