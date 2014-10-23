@@ -23,7 +23,6 @@ gem 'shotgun'
 gem 'dbc-ruby'
 gem 'awesome_print'
 
-group :test do
-  gem 'faker'
-  gem 'rspec'
-end
+gem 'faker'
+gem 'rspec'
+
