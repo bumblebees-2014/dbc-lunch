@@ -4,8 +4,9 @@ helpers do
   end
 
   def random_lunch_pairings
-    @lunchpartner1 = User.find((1..39).to_a.sample)
-    @lunchpartner2 = User.find((1..39).to_a.sample)
+    array = (1..39).to_a
+    @lunchpartner1 = User.find(array.shuffle!.pop)
+    @lunchpartner2 = User.find(array.shuffle!.pop)
 
     Lunch.create(lunchpartner1: @lunchpartner1, lunchpartner2: @lunchpartner2, location: "Dig Inn", date: Chronic.parse("tomorrow at noon"))
 

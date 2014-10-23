@@ -48,3 +48,7 @@ end
 DBC::Cohort.find(59).students.each do |student|
   User.create(name: student.name, username: student.name.gsub(/\s+/, "").downcase, password: student.name.gsub(/\s+/, "").downcase)
 end
+
+#retrieve what week via the lunch model
+#no need to create separate table
+#no need to use whenever because I'll have all the weeks store their lunches

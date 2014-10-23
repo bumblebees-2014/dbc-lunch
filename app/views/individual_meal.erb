@@ -1,6 +1,14 @@
 <h1>Individual Meal</h1>
-<%= random_lunch_pairings.lunchpartner1.name %><br>
-<button class="acceptance-btn">Accept</button><br>
+<p><%= @lunchpartner1.name %></p><br>
+<h4></h4>
+<form action="/meal/<%= @lunch.id %>" method="post" class="acceptance-btn1">
+  <input type="hidden" name="_method" value="put">
+  <input type="submit" value="Accept">
+</form><br>
 
-<%= random_lunch_pairings.lunchpartner2.name %><br>
-<button class="acceptance-btn">Accept</button>
+<h5><%= @lunchpartner2.name %></h5><br>
+<h4></h4>
+<form action="/meal/<%= @lunch.id %>" method="post" class="acceptance-btn2">
+  <input type="hidden" name="_method" value="put">
+  <input type="submit" value="Accept">
+</form><br>
