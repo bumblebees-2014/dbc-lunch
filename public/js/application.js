@@ -6,17 +6,13 @@ $(document).ready(function() {
     $('p.lunchpartner1').css('background-color', 'red')
     var url = $(this).attr("action")
 
-    console.log(url)
+    declineData = {lunchpartner1_accept: false}
+    url = $(this).attr("action")
 
-    $.ajax ({
-      type: "post",
-      url: "/meal/:id",// + lunchId.dataset.lunch,
-      data: $(this).serialize(),
-      dataType: "json"
-    }).done(function(response){
+    $.post(url,declineData,function(response){
       console.log(response)
-      $(".acceptance-btn2").append(response)
     })
+
   })
 
 
@@ -25,23 +21,19 @@ $(document).ready(function() {
     $(this).hide();
     $('p.lunchpartner2').css('background-color', 'red')
 
-    $.ajax ({
-      type: "post",
-      url: "/meal/:id", //+ lunchId.dataset.lunch,
-      data: $(this).serialize,
-      dataType: "jquery"
-    }).done(function(response){
+    declineData = {lunchpartner2_accept: false}
+    url = $(this).attr("action")
+
+    $.post(url,declineData,function(response){
       console.log(response)
     })
 
   });
 
 
-  if //(doc.getElementsByTagName("h4")[0].style.backgroundColor === "green") {
-    //alert("Success! You've both accepted!")
-    ($('h4').css('background-color') == "green")
-    {
-      alert("Success! You've both accepted.")
-  }
+  // if ($('p').css('background-color') === "green")
+  //   {
+  //     alert("One or both of you have declined...")
+  // }
 
 });
