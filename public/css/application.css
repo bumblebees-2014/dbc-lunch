@@ -1,9 +1,26 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+h1 {
+  margin: 0;
+  background-color: black;
+  color:white;
 }
-th {
-  text-align: left;
+
+header {
+  margin: 0;
+  background-color: black;
+  color:white;
+  text-align: center;
+}
+
+.header-links {
+  margin-left: 30px;
+}
+
+.header-links:link, .header-links:active, .header-links:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.header-links:hover {
+  color: orange;
+  text-decoration: none;
 }
